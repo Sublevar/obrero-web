@@ -1,0 +1,19 @@
+<section class="cosoteca-showcase section">
+  <div class="container">
+    <header class="cosoteca-showcase__header">
+      <h2 class="cosoteca-showcase__title">Cosoteca</h2>
+      <p class="cosoteca-showcase__lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus condimentum justo eget risus fringilla, a fermentum ipsum pretium.</p>
+    </header>
+
+    <div class="card-grid">
+      {% set cosoteca = get_section(path="cosoteca/_index.md") %}
+      {% for page in cosoteca.pages | slice(end=6) %}
+        {% include "partials/card.html" %}
+      {% endfor %}
+    </div>
+
+    <footer class="cosoteca-showcase__footer">
+      <a class="cosoteca-showcase__link" href="{{ get_url(path='/cosoteca/') }}">Ver todas las entradas &rarr;</a>
+    </footer>
+  </div>
+</section>

@@ -1,0 +1,148 @@
+// Variables
+$color-bg: #fff;
+$color-text: #1a1a1a;
+$color-muted: #666;
+$color-accent: #0a0a0a;
+$color-border: #e5e5e5;
+$font-sans: system-ui, -apple-system, sans-serif;
+$max-width: 1100px;
+
+// Reset
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: $color-bg;
+  color: $color-text;
+  font-family: $font-sans;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: underline; }
+
+// Layout
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.main { min-height: 70vh; padding: 3rem 0; }
+
+// Header
+.site-header {
+  border-bottom: 1px solid $color-border;
+  padding: 1rem 0;
+
+  .container { display: flex; align-items: center; justify-content: space-between; }
+}
+
+.site-logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -.02em;
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.5rem;
+
+  a { text-decoration: none; color: $color-muted; font-size: .9rem; }
+  a:hover { color: $color-text; }
+}
+
+// Hero
+.hero {
+  background: $color-accent;
+  color: #fff;
+  padding: 5rem 0;
+
+  &__eyebrow { font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: #888; margin-bottom: .75rem; }
+  &__title { font-size: 3.5rem; font-weight: 700; letter-spacing: -.03em; margin-bottom: 1rem; }
+  &__lead { max-width: 560px; color: #ccc; margin-bottom: 2rem; line-height: 1.7; }
+  &__actions { display: flex; gap: .75rem; flex-wrap: wrap; }
+  &__cta {
+    display: inline-block;
+    padding: .65rem 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    font-size: .9rem;
+
+    &--primary { background: $color-bg; color: $color-accent; }
+    &--secondary { background: transparent; color: #fff; border: 1px solid #444; }
+    &--secondary:hover { border-color: #888; }
+  }
+}
+
+// Cosoteca showcase
+.cosoteca-showcase {
+  &__header { margin-bottom: 2rem; }
+  &__title { font-size: 1.75rem; font-weight: 700; margin-bottom: .5rem; }
+  &__lead { color: $color-muted; max-width: 520px; }
+  &__footer { margin-top: 2rem; }
+  &__link { font-size: .9rem; font-weight: 600; text-decoration: none; color: $color-text; }
+  &__link:hover { text-decoration: underline; }
+}
+
+// Section
+.section { margin-top: 3rem; }
+.section__title { font-size: 1.5rem; margin-bottom: 1.5rem; }
+
+// Page header
+.page-header {
+  padding: 3rem 0 2rem;
+
+  &__title { font-size: 2rem; font-weight: 700; margin-bottom: .5rem; }
+  &__lead { color: $color-muted; max-width: 560px; }
+}
+
+// Card grid
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  border: 1px solid $color-border;
+  border-radius: 6px;
+  padding: 1.25rem;
+
+  &__title { font-size: 1.1rem; margin-bottom: .5rem; a { text-decoration: none; } }
+  &__description { color: $color-muted; font-size: .9rem; margin-bottom: .5rem; }
+  &__date { font-size: .8rem; color: $color-muted; }
+}
+
+// Breadcrumb
+.breadcrumb { margin-bottom: 2rem; }
+.breadcrumb__list { display: flex; gap: .5rem; list-style: none; font-size: .85rem; color: $color-muted; }
+.breadcrumb__item + .breadcrumb__item::before { content: "/"; margin-right: .5rem; }
+.breadcrumb__item--current { color: $color-text; }
+
+// Cosoteca entry
+.cosoteca-entry {
+  max-width: 720px;
+
+  &__header { margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid $color-border; }
+  &__title { font-size: 2rem; font-weight: 700; }
+  &__date { color: $color-muted; font-size: .85rem; margin-top: .5rem; display: block; }
+
+  &__body {
+    h2 { font-size: 1.35rem; margin: 2rem 0 .75rem; }
+    h3 { font-size: 1.1rem; margin: 1.5rem 0 .5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { margin: 0 0 1rem 1.5rem; }
+    li { margin-bottom: .25rem; }
+  }
+}
+
+// Footer
+.site-footer {
+  border-top: 1px solid $color-border;
+  padding: 1.5rem 0;
+  color: $color-muted;
+  font-size: .85rem;
+  margin-top: 4rem;
+}

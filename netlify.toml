@@ -1,0 +1,9 @@
+[build]
+  publish = "public"
+  command = "zola build"
+
+[[redirects]]
+  from = "https://cosoteca.obrero.ar/*"
+  to = "https://obrero.ar/cosoteca/:splat"
+  status = 200
+  force = true

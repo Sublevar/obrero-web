@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Cosoteca{% endblock title %}
+
+{% block content %}
+  <div class="container">
+    <header class="page-header">
+      <h1 class="page-header__title">{{ section.title }}</h1>
+      <p class="page-header__lead">{{ section.description | default(value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus condimentum justo eget risus fringilla, a fermentum ipsum pretium.") }}</p>
+    </header>
+
+    {% set breadcrumb_current = section.title %}
+    {% include "partials/breadcrumb.html" %}
+
+    <div class="card-grid">
+      {% for page in section.pages %}
+        {% include "partials/card.html" %}
+      {% endfor %}
+    </div>
+  </div>
+{% endblock content %}

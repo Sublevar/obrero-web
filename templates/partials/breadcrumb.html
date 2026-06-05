@@ -1,0 +1,11 @@
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol class="breadcrumb__list">
+    <li class="breadcrumb__item"><a href="{{ get_url(path='/') }}">Inicio</a></li>
+    {% if breadcrumb_section_url and breadcrumb_section_label %}
+    <li class="breadcrumb__item"><a href="{{ breadcrumb_section_url }}">{{ breadcrumb_section_label }}</a></li>
+    {% endif %}
+    {% if breadcrumb_current %}
+    <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">{{ breadcrumb_current }}</li>
+    {% endif %}
+  </ol>
+</nav>
