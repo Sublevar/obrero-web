@@ -2,6 +2,9 @@
   publish = "public"
   command = "zola build"
 
+[build.environment]
+  ZOLA_VERSION = "0.20.0"
+
 [[redirects]]
   from = "https://cosoteca.obrero.ar/*"
   to = "https://obrero.ar/cosoteca/:splat"
