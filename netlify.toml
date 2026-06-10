@@ -6,6 +6,12 @@
   ZOLA_VERSION = "0.20.0"
 
 [[redirects]]
+  from = "https://cosoteca.obrero.ar/main.css"
+  to = "https://obrero.ar/main.css"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "https://cosoteca.obrero.ar/*"
   to = "https://obrero.ar/cosoteca/:splat"
   status = 200
