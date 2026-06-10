@@ -10,3 +10,9 @@
   to = "https://obrero.ar/cosoteca/:splat"
   status = 200
   force = true
+
+[[redirects]]
+  from = "https://guiso.obrero.ar/*"
+  to = "https://sublevar-guiso.netlify.app/:splat"
+  status = 200
+  force = true
